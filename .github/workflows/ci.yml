@@ -20,4 +20,4 @@ jobs:
       image: argoproj/argocd:v2.4.11
     steps:
       - name: Check for dockerenv file
-        run: argocd --help
+        run: argocd --help; pwd; whoami
