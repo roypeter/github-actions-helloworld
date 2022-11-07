@@ -22,4 +22,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check for dockerenv file
-        run: argocd --help; pwd; whoami; ls -ltra; ls -ltra ${GITHUB_WORKSPACE}; hello.sh
+        run: argocd --help; pwd; whoami; ls -ltra; ls -ltra ${GITHUB_WORKSPACE}; ${GITHUB_WORKSPACE}/hello.sh
