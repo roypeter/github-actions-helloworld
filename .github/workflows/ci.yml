@@ -18,9 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: argoproj/argocd:v2.4.11
+      options: --user 1000
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: '/home/argocd/'
       - name: Check for dockerenv file
         run: argocd --help; pwd; whoami; ls -ltra; ls -ltra ${GITHUB_WORKSPACE}; hello.sh
