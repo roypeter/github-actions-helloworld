@@ -19,6 +19,8 @@ jobs:
     container:
       image: argoproj/argocd:v2.4.11
     steps:
+      - name: Fix permission
+        run: sudo chown -R $USER:$USER ${GITHUB_WORKSPACE}
       - uses: actions/checkout@v2
       - name: Check for dockerenv file
         run: argocd --help; pwd; whoami; ls -ltra; ls -ltra ${GITHUB_WORKSPACE}; hello.sh
