@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: argoproj/argocd:v2.4.11
-      options: --user 1000
+      options: --user 0
     steps:
       - uses: actions/checkout@v2
       - name: Check for dockerenv file
